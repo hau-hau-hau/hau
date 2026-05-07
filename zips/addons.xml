@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+<addon id="repository.hau"
+name="Hau Repository"
+version="1.1.0"
+provider-name="hau-hau-hau">
+
+<extension point="xbmc.addon.repository"
+name="Hau Repository">
+
+<dir>
+<info compressed="false">
+https://raw.githubusercontent.com/hau-hau-hau/hau/main/zips/addons.xml
+</info>
+<checksum>
+https://raw.githubusercontent.com/hau-hau-hau/hau/main/zips/addons.xml.md5
+</checksum>
+<datadir zip="true">
+https://raw.githubusercontent.com/hau-hau-hau/hau/main/zips/
+</datadir>
+</dir>
+
+<dir minversion="20.9.1">
+<info compressed="false">
+https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/omega/zips/addons.xml
+</info>
+<checksum>
+https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/omega/zips/addons.xml.md5
+</checksum>
+<datadir zip="true">
+https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/omega/zips/
+</datadir>
+</dir>
+
+</extension>
+
+<extension point="xbmc.addon.metadata">
+<summary>Hau Repository</summary>
+<description>Aggregated Kodi repository.</description>
+<platform>all</platform>
+<assets>
+<icon>icon.png</icon>
+</assets>
+</extension>
+
+</addon>
+
+<addon id="plugin.video.yawsp" name="YAWsP TMDb Smart Search 0.5.4" version="0.5.1" provider-name="cache-sk with user-extensions">
+    <requires>
+        <!--import addon="xbmc.python" version="2.19.0"/-->
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Yet Another Webshare Plugin</summary>
+        <disclaimer lang="en_GB">The plugin does not provide any content, it is only a simulation of the browser of a publicly available web site. I am not responsible for the content provided by this site.</disclaimer>
+        <disclaimer lang="sk_SK">Plugin neposkytuje žiaden obsah, je to len simulácia prehliadača verejne dostupnej web stránky. Nie som zodpovedný za obsah, ktorý táto stránka poskytuje.</disclaimer>
+        <disclaimer lang="cs_CZ">Plugin neposkytuje žádný obsah, je to jen simulace prohlížeče veřejně dostupné web stránky. Nejsem zodpovědný za obsah, který tato stránka poskytuje.</disclaimer>
+        <platform>all</platform>
+        <license>AGPL 3.0</license>
+        <forum>https://www.xbmc-kodi.cz/prispevek-yet-another-webshare-plugin</forum>
+        <source>https://github.com/cache-sk/plugin.video.yawsp</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+        <news>
+[B]0.3.0[/B]
+- pridana funkce spravce serialu - umoznuje vyhledat, organizovat a sledovat serialy
+- automaticke trideni epizod do sezon
+- historie vyhledanych serialu
+[B]0.2.0[/B]
+- nexus compatibility
+[B]0.1.9[/B]
+- matrix compatibility pt3
+[B]0.1.8[/B]
+- matrix compatibility pt2
+[B]0.1.7[/B]
+- matrix compatibility pt1
+[B]0.1.6[/B]
+- experimenty s uuid/headermi aby neukladalo historiu viac krat - nepomohlo..
+- uuid je generovane
+[B]0.1.5[/B]
+- fixed stahovanie, aby slo aj na sambu
+[B]0.1.4[/B]
+- experimental
+[B]0.1.3[/B]
+- experimental
+[B]0.1.2[/B]
+- pridane stahovanie
+[B]0.1.1[/B]
+- pridane v menu hladania aj vsetky najnovsie a najvacsie (pozor, zobrazuje to aj adult obsah)
+[B]0.1.0[/B]
+- prvy verejny release
+- TODO stahovanie
+- TODO hladanie pomocou TMDB
+        </news>
+    </extension>
+</addon>
+
+<addon id="plugin.video.themoviedb.helper"
+version="6.16.14"
+name="TMDb Helper Webshare International"
+provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.1"/>
+  <import addon="script.module.requests" version="2.9.1"/>
+  <import addon="script.module.pil" version="1.1.7"/>
+  <import addon="script.module.addon.signals" version="0.0.6" />
+  <import addon="script.module.jurialmunkey" version="0.2.35" />
+  <import addon="script.module.infotagger" version="0.0.5" />
+  <import addon="script.module.qrcode" version="6.1.0" />
+</requires>
+<extension point="xbmc.python.pluginsource" library="resources/plugin.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.python.script" library="resources/script.py" />
+<extension point="xbmc.service" library="resources/service.py" />
+<extension point="xbmc.python.module" library="resources/modules"/>
+<extension point="xbmc.addon.metadata">
+  <reuselanguageinvoker>false</reuselanguageinvoker>
+  <summary lang="de_DE">TMDb Helfer</summary>
+  <summary lang="en_GB">TMDb Helper</summary>
+  <summary lang="es_ES">Asistente TMDb</summary>
+  <summary lang="zh_CN">TMDb 助手</summary>
+  <description lang="de_DE">TMDb Helper liefert Details über Filme, Fernsehsendungen und Schauspieler aus TMDb. Benutzer können auf eine Vielzahl von Listen aus TMDb TVDb MDbList und Trakt zugreifen.</description>
+  <description lang="en_GB">TMDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb TVDb MDbList and Trakt.</description>
+  <description lang="es_ES">TMDb Helper proporciona detalles sobre películas, series y actores de TMDb. Los usuarios pueden acceder a una variedad de listas de TMDb, TVDb, MDbList y Trakt.</description>
+  <description lang="pl_PL">TMDb Helper dostarcza szczegółowych informacji o filmach, serialach i aktorach z serwisu TMDb. Użytkownicy mają dostęp do szeregu list z serwisów TMDb, TVDb, MDbList i Trakt.</description>
+  <description lang="sv_SE">TMDb Helper tillhandahåller information om filmer, tv-serier och skådespelare från TMDb. Användare kan få tillgång till en mängd olika listor från TMDb, TVDb, MDbList och Trakt.</description>
+  <description lang="zh_CN">TMDb 助手从 TMDb（影视数据库） 获取电影、电视剧及演员的详细信息。用户可访问来自 TMDb、TVDb、MDbList 和 Trakt 的各类影视列表。</description>
+  <disclaimer lang="de_DE">Daten bereitgestellt von TMDb TVDb MDbList OMDb FanartTV und Trakt. Einige der Informationen werden von TheTVDB.com bereitgestellt. Bitte erwäge sie zu unterstützen. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="en_GB">Data provided by TMDb TVDb MDbList OMDb FanartTV and Trakt. Some of the information is provided by TheTVDB.com. Please consider supporting them. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="es_ES">Datos proporcionados por TMDb, TVDb, MDbList, OMDb, FanartTV y Trakt. Parte de la información es suministrada por TheTVDB.com. Por favor, considera apoyarles. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="pl_PL">Dane dostarczane przez TMDb TVDb MDbList OMDb FanartTV i Trakt. Niektóre informacje pochodzą z serwisu TheTVDB.com. Prosimy o rozważenie wsparcia tych serwisów. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="sv_SE">Data tillhandahållen av TMDb TVDb MDbList OMDb FanartTV och Trakt. En del av informationen tillhandahålls av TheTVDB.com. Stöd dem gärna. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="zh_CN">数据由 TMDb、TVDb、MDbList、OMDb、FanartTV 和 Trakt 提供。部分信息由 TheTVDB.com 提供，建议您支持他们。订阅链接：https://thetvdb.com/subscribe</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <website>https://github.com/jurialmunkey/plugin.video.themoviedb.helper</website>
+  <forum>https://forum.kodi.tv/showthread.php?tid=345847</forum>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    <clearlogo>clearlogo.png</clearlogo>
+    <screenshot>resources/screenshot-01.jpg</screenshot>
+    <screenshot>resources/screenshot-02.jpg</screenshot>
+  </assets>
+</extension>
+</addon>
+
+</addons>
